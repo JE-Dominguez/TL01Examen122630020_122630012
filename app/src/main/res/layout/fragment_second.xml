@@ -21,9 +21,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/ic_menu_camera"
-            tools:ignore="MissingConstraints"
-            tools:src="@tools:sample/avatars" />
+            app:srcCompat="@drawable/ic_contact"
+            tools:ignore="MissingConstraints" />
 
         <Button
             android:id="@+id/btnfoto"
@@ -46,9 +45,6 @@
             app:layout_constraintTop_toBottomOf="@id/btnfoto"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
-
-
-        <!-- Nombre -->
 
         <!-- Telefono -->
         <EditText

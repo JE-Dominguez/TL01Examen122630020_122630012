@@ -22,7 +22,7 @@ public class Transacciones {
                     id + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     pais + " TEXT NOT NULL, " +
                     nombre + " TEXT NOT NULL, " +
-                    telefono + " TEXT NOT NULL, " +
+                    telefono + " TEXT NOT NULL UNIQUE, " +
                     nota + " TEXT, " +
                     imagen + " TEXT)";
 
@@ -34,13 +34,13 @@ public class Transacciones {
     public static final String SELECTALLCONTACTOS =
             "SELECT * FROM " + TableContactos;
 
-    // INSERT - ejemplo con parámetros
+    // INSERT
     public static final String INSERTCONTACTO =
             "INSERT INTO " + TableContactos +
                     "(" + pais + ", " + nombre + ", " + telefono + ", " + nota + ", " + imagen + ") " +
                     "VALUES (?, ?, ?, ?, ?)";
 
-    // UPDATE - ejemplo con parámetros
+    // UPDATE
     public static final String UPDATECONTACTO =
             "UPDATE " + TableContactos + " SET " +
                     pais + " = ?, " +
@@ -50,11 +50,11 @@ public class Transacciones {
                     imagen + " = ? " +
                     "WHERE " + id + " = ?";
 
-    // DELETE - ejemplo con parámetro
+    // DELETE
     public static final String DELETECONTACTO =
             "DELETE FROM " + TableContactos + " WHERE " + id + " = ?";
 
-    // SELECT por ID - ejemplo con parámetro
+    // SELECT por ID
     public static final String SELECTCONTACTOBYID =
             "SELECT * FROM " + TableContactos + " WHERE " + id + " = ?";
 }

@@ -6,11 +6,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+// Archivo: SQLiteConexion.java
+
 public class SQLiteConexion extends SQLiteOpenHelper {
 
     // Constructor
     public SQLiteConexion(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+        // Incrementa este número (por ejemplo, de 1 a 2)
+        super(context, name, factory, 1);
     }
 
     @Override
@@ -21,8 +24,7 @@ public class SQLiteConexion extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // Eliminar tabla si existe y recrear
-        db.execSQL(Transacciones.DROPTABLECONTACTOS);
-        onCreate(db);
+        db.execSQL(Transacciones.DROPTABLECONTACTOS); // Borra la tabla vieja
+        onCreate(db); // Crea la tabla con la nueva estructura
     }
 }

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contact_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="30dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/contact_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/imagen_de_contacto"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_contact"
+                app:shapeAppearanceOverlay="@style/CircularShapeAppearance"/>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/contact_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre Apellido"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#222222" />
+
+                <TextView
+                    android:id="@+id/contact_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+504 0000-0000"
+                    android:textSize="15sp"
+                    android:textColor="#555555"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/contact_actions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical|end"
+            android:weightSum="5">
+
+            <ImageButton
+                android:id="@+id/button_call"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/circle_button_background_primary"
+                android:contentDescription="Llamar"
+                android:padding="10dp"
+                android:src="@drawable/ic_phone"
+                app:tint="#FFFFFF" />
+
+            <ImageButton
+                android:id="@+id/button_edit"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/circle_button_background_warning"
+                android:contentDescription="Editar"
+                android:padding="10dp"
+                android:src="@drawable/ic_edit"
+                app:tint="#FFFFFF" />
+
+            <ImageButton
+                android:id="@+id/button_ver"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/circle_button_background"
+                android:contentDescription="Ver imagen"
+                android:padding="10dp"
+                android:src="@drawable/ic_imagen"
+                app:tint="#FFFFFF" />
+
+            <ImageButton
+                android:id="@+id/button_compartir"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/circle_button_background"
+                android:contentDescription="Compartir"
+                android:padding="10dp"
+                android:src="@drawable/ic_compartir"
+                app:tint="#FFFFFF" />
+
+            <ImageButton
+                android:id="@+id/button_eliminar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/circle_button_background_danger"
+                android:contentDescription="Eliminar"
+                android:padding="10dp"
+                android:src="@drawable/ic_delete"
+                app:tint="#FFFFFF" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
